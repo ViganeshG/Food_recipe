@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
-
 class Recipe {
-  final String name;
-  final String images;
-  final double rating;
-  final String totalTime;
+  final String? name;
+  final String? images;
+  final double? rating;
+  final String? totalTime;
 
-  const Recipe(this.name, this.images, this.rating, this.totalTime);
+  const Recipe({this.name, this.images, this.rating, this.totalTime});
 
   factory Recipe.fromJSON(dynamic json) {
     return Recipe(
@@ -23,6 +21,6 @@ class Recipe {
 
   @override
   String toString() {
-    return 'Recipe {name: $name,images: $images,rating: $rating,totalTime: $totalTime}';
+    return 'Recipe {name: $name ,images: $images,rating: $rating,totalTime: $totalTime}';
   }
 }
